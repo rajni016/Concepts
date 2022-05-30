@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            function Postserver(){
+      
+                let parameters ={
+                    "name":"john",
+                    "job":"professor"// java script object
+                }
+                fetch("https://reqres.in/api/users",{method:"POST", body:JSON.stringify(parameters)})// data is simple java script  objects so we are converting into json objects 
+                .then(res=>res.json())
+                .then(data=>{
+                    document.getElementById("showdata").innerHTML=JSON.stringify(data);
+                   
+                })
+               
+
+            }
+            function date(){
+                    let d =new Date();
+                    d.setDate(d.getDate()+20);
+                    console.log(d);
+                    document.getElementById("Showdate").innerHTML=d;
+                }
+
+        </script>
+    </head>
+    <body>
+        <div id="Showdate"></div>
+       <div id="showdata"></div>
+       <input type="button" value="CLICK ME" onclick="Postserver()"/>
+       <input type="button" value="clickme" onclick="date()"/>
+       
+
+    </body>
+</html>

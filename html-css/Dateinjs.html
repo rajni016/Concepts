@@ -1,0 +1,22 @@
+<htmL> 
+    <head>
+        <script>
+
+            function currentdate(){
+                let cd=new Date();
+                console.log(cd);
+                console.log(cd.getDate()+"...."+cd.getFullYear()+"--"+cd.getSeconds())
+                cd.getTime();
+                let ad=new Date();
+                ad.setDate(cd.getDate()+25);
+            console.log(ad);
+        }
+
+
+        </script>
+    </head>
+    <body> 
+        <input type="button" value="click me" onclick="currentdate()"/>
+    
+    </body> 
+</htmL>

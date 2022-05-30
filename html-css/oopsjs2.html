@@ -1,0 +1,25 @@
+<html>
+    <head> 
+        <script>
+            // creation of methods by using the oops concepts
+            //in js we donot need to define data type
+            class Person{
+                name="test";
+                age=45;
+               constructor(name, age){  // needs to mention constructorin JS where as in java class we mention class name as constructor
+                   this.name1=name;
+                   this.age1=age;
+               }
+               printname(){
+                   console.log(this.name1+"--"+this.age1);
+               }
+            }
+            obj=new Person("test1",101); // constructor is used to initialize the values when object is created
+       
+        
+        </script>
+    </head>
+    <body>
+        <input  type="button" value="click me" onclick="obj.printname()">
+    </body>
+</html>

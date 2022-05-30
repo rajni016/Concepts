@@ -1,0 +1,18 @@
+<htmL> 
+    <head>
+        <script>
+            function printInHTml(){
+                document.getElementById("div_id").innerHTML="Sample Html"
+                document.getElementById("h1_ele").innerHTML="this is heading element"// injecting the values to html page
+
+                // entire html is considered as DOM
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id=div_id></div>
+        <h1 id="h1_ele"></h1>
+        <input type="button"value="dom_change" onclick="printInHTml()"/>
+    </body>
+</htmL>

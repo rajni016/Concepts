@@ -1,0 +1,175 @@
+<html>
+    <head>
+  <style>
+      .menu-li{
+display: inline-block;  
+  /*list gives us horizontal,making vertical*/
+  margin:0 20px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(218, 17, 50);
+    text-decoration:underline;/* when hoovering it gets underlined*/
+}
+.has-sub li{ 
+    list-style-type: none;
+
+}
+.has-sub{
+    position:relative;
+}
+.sub-menu{
+    display: none;
+    position: absolute;
+    top:15px;
+    left:3px;
+    width:120px;
+}
+.sub-menu li{
+    margin:5px 0px 0px 0px;
+   
+}
+.has-sub:hover .sub-menu{
+    display: block;
+    
+}
+
+   
+
+
+.Sub-btn{
+    width: 20%;
+    margin: 0 auto;
+}
+.btn{
+    background-color:indianred;
+    width:100%;/* 100 percent is based on the 20% of parent button of sub btn*/
+}
+.menu-li.active > a{
+    background-color:rgb(218, 17, 50);
+    color: antiquewhite;
+    padding: 10px,10px;
+    /* > (applies to the anchor tags of direct child)only applies to the direct child*/
+}
+.clock1{
+    position: fixed;
+    bottom: 30px;
+    right:50px;
+    
+}
+.contact-form {
+    width: 70%;
+    margin-left: auto;
+    position: relative;
+    
+    
+}
+.user-name input {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: x-large;
+    position:absolute;
+   
+
+}
+.user-name input{
+    position: relative;
+}
+
+.para-one{
+   
+    width:100%;
+    height: 35px;
+    text-align:center;
+    opacity: 0.7;
+    position:absolute;
+    margin-top: 8px;
+    font-size: x-large;
+   
+
+}
+.email-name{ 
+    position:absolute;
+    margin-top :20%;
+    width:70%;
+   
+
+}
+.email-name email-one {
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    font-size: x-large;
+    position:absolute;
+    margin-top:50%;;
+    
+   
+
+
+}
+.email-name input{
+    position: relative;
+}
+ .para-two{
+   
+   width:100%;
+   text-align:center;
+   opacity: 0.7;
+   position: absolute;
+   margin-top: ;
+    background-color: antiquewhite;
+   font-size: x-large;
+  
+}
+
+  </style>
+  
+    </head>
+        <body>
+            <ul>
+                <li class="menu-li has-sub">
+                    <a href="menu_design.html">Home</a>  
+               
+                <div class="sub-menu">
+                    <ul>
+                        <li><a href="option1">Sub menu1</a> </li>
+                        <li><a href="option1">Sub menu2</a> </li>
+                        <li><a href="option1">Sub menu3</a> </li>
+                    </ul> 
+                </div>
+            </li>
+
+                <li class="menu-li"><a href="About.html">About</a></li>
+
+                <li class="menu-li active"><a href="Contact.html">Contact</a></li>
+            
+
+            </ul>
+        <form class="contact-form">
+            <h1 class="us"> Contact Us</h1>
+            <div class="user-name"> 
+                <input type="text" placeholder="Enter Username">
+                <div class="para-one">
+                    <p >Please Provide Name</p>
+                </div>
+            </div>
+            <div class="email-name"> 
+                <input class="email-one" type="text" placeholder="Enter Email">
+                <div class="para-two">
+                    <input type="text" placeholder="Please Provide Email Address">
+                </div>
+            </div>
+        
+          
+
+
+    </form>
+    <div class="clock1">
+        <h1> 7:30</h1>
+    </div>
+        </body>
+   
+</html>

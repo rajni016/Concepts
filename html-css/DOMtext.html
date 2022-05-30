@@ -1,0 +1,27 @@
+<htmL> 
+    <head>
+        <script>
+
+            function getText(){
+                let val=document.getElementById("text1").value;
+               
+                if (val==""){
+                    alert("text box is empty");
+                }
+                else{
+                    document.getElementById("ele").innerHTML= val;//will append the text box value to this header
+                   
+                }
+
+            }      
+
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="enter user name" id="text1"/>
+        <h1 id="ele"></h1>
+        <input type="button" value="value" onclick="getText()"/>
+    
+    
+    </body> 
+</htmL>

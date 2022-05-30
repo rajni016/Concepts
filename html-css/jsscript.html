@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <script>
+            let name="abc";
+            console.log(name);
+            /*index array*/
+            let arrayname=[];
+            arrayname[1]="name1";
+            arrayname[2]="name2";
+            arrayname[3]="name3";
+            arrayname[4]="name4";
+            arrayname.push("name5");
+            for(let value in arrayname){
+                console.log(arrayname[value]);
+            }
+            for(let value in arrayname){
+                console.log(value);/*wiill give only index values*/
+            }
+            /*Object array */
+            let arrayname1=
+            {
+                "name":"name1",
+                "email":"email1@gmail.com",
+                "id":1
+
+            };
+            console.log(arrayname1);
+            for(let value in arrayname1){
+                /* console.log(value);this will give you only keys*/
+                console.log(value+"---"+arrayname1[value]);/*this will give you values of keys*/
+            }
+            /* json object- combination of index array and object array*/
+            let jsonobjects=[
+                {
+                "name":"name1",
+                "email":"email1@gmail.com",
+                "id":1
+                },
+                {
+                "name":"name2",
+                "email":"email2@gmail.com",
+                "id":2
+
+                },
+                {
+                "name":"name3",
+                "email":"email3@gmail.com",
+                "id":3
+                } 
+
+            ];
+            console.log(jsonobjects[1]['email']);
+
+           for(let val in jsonobjects){
+               /*console.log(jsonobjects[val]);*/
+               console.log(jsonobjects[val]['name']);
+
+            }
+            for(let val in jsonobjects){
+               console.log(jsonobjects[val]);
+               
+
+            }
+            
+
+            
+
+        </script>
+        
+
+
+    </head>
+    <body>
+
+    </body>
+</html>

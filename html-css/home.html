@@ -1,0 +1,227 @@
+<html>
+    <head>
+      My first html page
+      <style>
+          body{
+              background-color:azure;
+          }
+         /* h1{
+              color:rgb(255, 166, 0);
+              font-size: 60 px;
+              background-color: blue;
+              text-align: center;/*only text will move , where as in float entire float will move 
+          }*/
+          .header2{
+              color:midnightblue;
+              vertical-align: auto;
+              text-decoration:underline;
+              text-transform: uppercase;
+             
+
+        
+          }
+          .header1{
+              color:blueviolet;
+              font-variant: small-caps;
+             
+          }
+          .input1{
+              border-color: chartreuse;
+          }
+          #radio1{
+             border-color: darkblue;
+            
+          }
+          .textarea1{
+              width:50%; /* This size is in reference to the browser size,size will be 50% with respect to the browser size*/
+              height:100 ;/*Height cannot be in% like width it is available in only in pixels*/
+              border: 2px dashed coral;
+          }
+          img{
+              /*display:none; hides the content or element
+              display:block; will show the content*/
+           
+          }
+          .home{
+              display:none;
+          }
+          .overflowcontent{
+              width:50%;
+              height: 100px;
+              overflow: hidden;/*over flown content is hidden*/
+             /* overflow: scroll;over flown content is scrolled*/
+              overflow:auto;/*over flown content is scrolled if it is necessary*/
+              /*overflow-y: 10px;over flown content is shown upto mentioned height in vertical direction*/
+          }
+          .header{
+              float:right;
+              
+              
+          }
+          .transbutton{
+             /* background-color: aqua;*/
+              opacity: 1;
+              padding-left: 100px;
+              padding-right: 50px;
+              padding-top: 50px;
+              padding-bottom: 100px;
+
+          }
+          .textarea2{
+              max-width: 150px;/* it will take maximum of width of 150p*/
+          }
+          .pressbutton{
+              margin-top: 100px;/*this will create the space around the button, difference b/w margin and padding is padding will add
+              space around the element with background color (seetansbutton)*/
+              margin-bottom: 50px;
+              margin-left: 150px;
+              margin-right: 100px;
+          }
+          .enterbutton{
+              width:100px;
+              height:20px;
+              margin:10px 20px;/* 10px is used to top and bottom, 20px is used for right and left
+              margin: 15px( for all the sides top ,bottom, right left)
+              margin: 10px 15px 20px, top and bottom 10px, right: 15, left:20px
+              same applicable for padding also in one line*/
+          }
+          .clock{
+              position: fixed;/* remains fixed even web page is moved,must mention 2 directions either top or bottom and right or left*/
+              top:20px;
+              right: 30px;
+          }
+          .parent{
+              position: relative;/* child position is fixed with repsect t
+
+          }
+          .child{
+              position: absolute;/*fix the element with respect to the parent element, will not remain in position when scrolled */
+              top:100px;
+              right:50px;
+          }
+
+      </style>
+    </head>          
+    <body>
+        content of the webpage
+    <div>
+        <input class="enterbutton" type="button" value="enter">
+    </div>
+    <div>
+        <h1 class="clock"> 4:40</h1>
+    </div>
+    <div class="parent">
+        <div class="child">
+            <h1>Relative postion</h1>
+         </div>
+    </div>
+  
+    <h1 class="header">this header1</h1>
+    <h2 class="header1">this is header2</h2>
+    <h3 class="header1">this is header3</h3>
+    <h4 class="header1">this is header4</h4>
+    <h5 class="header2">this is header5</h5>
+    <div class="overflowcontent">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempus luctus justo, non tincidunt elit vulputate non. Morbi vitae ante at sapien dapibus porttitor fermentum dapibus arcu. Nunc quis arcu at diam convallis ultrices. Etiam molestie lectus eget elit eleifend, eu egestas velit cursus. Pellentesque blandit ac magna et auctor. In dignissim ipsum tellus, eu varius augue pulvinar vel. Donec dignissim bibendum felis sed tincidunt.
+
+Proin congue ultrices velit feugiat semper. Quisque tempor sapien leo, id ultrices diam lobortis eu. Mauris luctus molestie enim, ut consectetur metus eleifend eu. Pellentesque tincidunt erat non risus gravida, quis volutpat arcu interdum. Ut viverra eget magna quis porta. Vestibulum sagittis nulla eu diam feugiat pellentesque. Praesent mauris nibh, porttitor ut dapibus ut, aliquet a tellus. Nulla eu facilisis leo, nec vehicula ex. Morbi lectus sem, ullamcorper eget mi nec, dapibus efficitur justo.
+
+Integer vel consectetur lorem, at tincidunt velit. Nunc sed cursus urna. Fusce ac tempus risus. Suspendisse potenti. Nam arcu sapien, porta vitae bibendum non, porttitor a neque. Duis tellus nunc, pharetra vel lacus ac, finibus maximus ligula. Proin auctor mi quis vehicula molestie. Morbi libero augue, hendrerit et justo eget, pulvinar finibus nulla. Vivamus viverra eget erat in commodo. Sed consequat mi vel risus imperdiet, eu rutrum est dapibus.
+
+Suspendisse fringilla sit amet metus non venenatis. Mauris elit magna, tristique luctus est eget, imperdiet bibendum nisi. Integer molestie nec ante eget consectetur. Ut in malesuada ipsum. Quisque efficitur, tortor vel accumsan egestas, ante mauris aliquet lorem, vel interdum libero nunc in sapien. Sed sapien sem, eleifend vitae purus malesuada, faucibus semper massa. Proin imperdiet dictum volutpat. Nullam a nisl commodo, maximus ex ut, vehicula tortor. Nullam convallis luctus eros et aliquet. Duis urna eros, vestibulum sed purus vel, pellentesque cursus enim. Integer lobortis nibh a leo eleifend hendrerit.
+    </div>
+
+    <input class="input1" type="text">
+    <input id="radio1" type="radio">
+    <div>
+        <input type="text">
+        
+    </div>
+    <div>
+        <input class="transbutton"type="button" value="insert"> 
+    </div>
+    <div>
+        <span> Div is used to separate the content,  </span>
+        <span>span is used to give inline content </span>
+    </div>
+    <input type="password" >
+    <div>
+        <input type="checkbox">
+    </div>
+
+    <textarea>
+        HELLO
+        How are you?
+        
+    </textarea>
+    <input type="radio" >
+    <ul>
+        <li>
+            Hi hello
+        </li>
+        <li>
+            list has to be used in the ul
+        </li>
+    </ul>
+    <a  href="https://www.google.com/">Click here to navigate to extrenal link</a>
+    <button class="pressbutton"> press button</button>
+    <img width="150" height="150" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png">
+    <audio src=""></audio>
+    <form method="Post" action="server end point/api url">
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="enter password">
+        <div>
+            <input type="submit" placeholder="submit">
+        </div>
+        <div>
+            <textarea  class="textarea1">
+                form is used to get the input, in the action we need to enter the url
+                This data is sent to the server
+            </textarea>
+        </div>
+    </form>
+    <iframe class="home"src="home.html"> </iframe>
+    <iframe src="https://www.google.com/"></iframe>
+
+
+    i frame is used to include other web pages when a website doesnot want to show its content, web page will not load.
+    We can inlcude any text inside the body tag. All tags comes in the body tag.Text area is same as 
+   <select>
+     <option >Option1</option>
+     <option >Option2</option>
+     <option >Option3</option>
+     <option> Option4</option>
+    <option >None 
+        of the above</option>
+    <option> Option4</option>
+
+   </select>
+   <table>
+       <tr>
+           <td>td represents table data</td>
+           <td>gives us rows </td>
+           <td>td represents table data</td>
+           <td>td represents table data</td>
+
+       </tr>
+       <tr>
+           <td>td gives usrows</td>
+           <td>tr represents rows</td>
+
+       </tr>
+   </table>
+   <div class="textarea2">
+
+        css properties can be implemented by three ways
+        1. using the tag
+        2.using the class name
+        3. using id, id must be unique    
+   
+   </div>
+
+  
+  
+    <footer>  This is footer</footer>
+
+    </body>
+</html> 

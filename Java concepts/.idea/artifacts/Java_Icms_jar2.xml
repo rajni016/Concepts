@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Java Icms:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/Java_Icms_jar2</output-path>
+    <root id="archive" name="Java Icms.jar">
+      <element id="module-output" name="Java Icms" />
+      <element id="extracted-dir" path="$USER_HOME$/ojdbc8-21.5.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

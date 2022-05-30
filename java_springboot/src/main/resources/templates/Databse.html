@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List from Databse</title>
+</head>
+<body>
+<div
+        th:each="customerslist:${listfromdb}"
+
+>
+    <span th:text="${customerslist.password}"></span>
+    <span th:text="${customerslist.id}"></span>
+    <span th:text="${customerslist.email}"></span>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+25th april class
+// headers are used to get and post mtehods
+2 ways to receive headers
+1.@Requestheader --to get header from the request
+All the API's should validate the token, Requestheader will not set the common method for token validation for all APIs
+So we will go for a configuration which is common for all apis
+Steps:
+@Configuration
+comes from HandlerInterceptor
+Implement 3 methods:
+Prehandle
+post handle
+after completion
+--Prehandle, this method executes before going to the controller, it is boolean type if it returns true then only request will go to controller
+--posthandle, before sends the response to the client
+--after completion-- after sends response to the client
+-- to add the interceptor we need a webmvcconfigurer --addInterceptrors method we can add overinterceptor
+Token Validation:
+
+
+--- Common Error Handling:
+@Controlleradvice
+--no need of try and catch
+--its like customised and common exception managemnet system
+
+---: The following 1 profile is active: "dev"--- is used to create application properties for separate user
+----Html file in Static
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@Configuration
+public class TokenInterceptor implements HandlerInterceptor {
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        System.out.println("prehandler");
+        //passing the headers
+        String token=request.getHeader("token");
+        System.out.println("token is"+token);
+        if(token.equals("")||token==null){
+            System.out.println("empty token, so cannot go to the controller" );
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+        System.out.println("posthandler");
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+        System.out.println("aftercompletion");
+    }
+}
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+@Configuration
+public class WebMvcConfig implements WebMvcConfigurer {
+    @Autowired
+    TokenInterceptor token;
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+       registry.addInterceptor(token);
+    }
+}
+Logger Configuration:
+--write the data to the file at prescribed time.
+-- create the file in resources, file should be log4j2.xml
+--you should mention in application props whether you are going to use info, error, trace,warn, fatal,debug,all
+
+---  String builder

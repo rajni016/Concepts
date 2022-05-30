@@ -1,0 +1,19 @@
+g-->generate
+c-->component
+d-->directive
+p-->pipes
+s-->service
+
+ng new application name--> create the angular application
+ng serve-->to run the application
+ng g c  componentname-->to create the component
+ng g d  directivename-->to create directive
+ng g p pipename-->to create pipes
+ng g servicename--> create services
+ng build-->to build angular applicationls
+localhost:4200(see angular application)
+
+
+
+
+

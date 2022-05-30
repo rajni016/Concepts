@@ -1,0 +1,80 @@
+.menu-li{
+    display: inline-block;  
+      /*list gives us horizontal,making vertical*/
+      margin:0 20px;
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover{
+        color: rgb(218, 17, 50);
+        text-decoration:underline;/* when hoovering it gets underlined*/
+    }
+    .has-sub li{ 
+        list-style-type: none;
+    
+    }
+    .has-sub{
+        position:relative;
+    }
+    .sub-menu{
+        display: none;
+        position: absolute;
+        top:15px;
+        left:3px;
+        width:120px;
+    }
+    .sub-menu li{
+        margin:5px 0px 0px 0px;
+       
+    }
+    .has-sub:hover .sub-menu{
+        display: block;
+        
+    }
+    
+    .contact-form input, textarea{
+        width: 100%;
+        margin:20px 0;
+        resize: none;
+    }
+    .contact-form textarea{
+        height: 150px;
+    }
+    .contact-form{
+        width: 50%;
+        margin:0 auto;
+    
+    }
+    .Sub-btn{
+        width: 20%;
+        margin: 0 auto;
+    }
+    .btn{
+        background-color:indianred;
+        width:100%;/* 100 percent is based on the 20% of parent button of sub btn*/
+    }
+    .menu-li.active > a{
+        background-color:rgb(218, 17, 50);
+        color: antiquewhite;
+        padding: 10px,10px;
+        /* > (applies to the anchor tags of direct child)only applies to the direct child*/
+    }
+    .clock1{
+        position: fixed;
+        bottom: 30px;
+        right:50px;
+        
+    }
+    .name-error{
+        width: 100%;
+        background-color:aliceblue;
+        opacity: 0.9;
+        margin:0 0;
+    }
+    .email-error{
+        width: 100%;
+        background-color:brown;
+        opacity: 0.9;
+    
+    }

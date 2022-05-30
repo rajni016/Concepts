@@ -1,0 +1,44 @@
+<htmL> 
+    <head>
+        <script>
+            function chanepageno(){
+                let val=document.getElementById("pageno").value;
+                getAPI(val);
+            }
+            function getAPI(pageno){
+                fetch("https://reqres.in/api/users?page="+pageno)
+                .then(res_all=>res_all.json())
+                .then(res=>{
+                    console.log(res['data']);
+                    let data_json=res['data'];
+                    let data_text="";
+                    for(obj in data_json){
+                        data_text+="<img src='"+data_json[obj]['avatar']+"'/>"// ++ used to access the objects
+                       data_text+= data_json[obj]['email']+""+ data_json[obj]['first_name']+"<br>"
+                       
+                          }
+                          document.getElementById("response").innerHTML=data_text;// showing the data in webpage
+                   }) 
+                    
+                }
+               
+//fetch is default java script method which will help us to call API
+                 
+        </script>
+
+    </head>
+    <body>
+        <div><select onchange="chanepageno()" name="" id="pageno">
+            <option value="1">page 1</option>
+            <option value="2">page 2</option>
+            <option value="3">page 3</option>
+            <option value="4">page 4</option>
+        </select>
+    </div>
+       <diV id="response"></diV>
+        <input type="button" value="Click me" onclick="getAPI(1)"/>
+
+    
+    
+    </body> 
+</htmL>

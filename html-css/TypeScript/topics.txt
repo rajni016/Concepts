@@ -1,0 +1,16 @@
+-->Angular uses Component Architecture(is a combination of html,css,ts)
+-->Advantages of Angular:
+Reusable components--> changes is Reusable components is applicable in all other routing components
+Routing components
+Above Advantages are appliacble toboth angular and react
+component-->web pages
+Services-->common business logic can be implemented in a separate file and can be accessed in the project
+Directives--> reusable ui in the apps
+pipes-->text transformation
+Routing Configuration-->navigation from one page to another
+template integration-->web pages integration(Integrating the new html pages)
+http api Calls(Spring boot api)-->
+Security(Token Authentication and authorization)-->login token
+app.module.ts-->Common project file
+
+
