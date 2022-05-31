@@ -1,3 +1,12 @@
 <app-header></app-header>
 <p>about works!</p>
 <h3>to display this, add component path (url end)in the app.module</h3>
+{{pagename}}
+<div>
+    <h1>Login form</h1>
+
+    <div><input type="text" placeholder="enter username" [(ngModel)]="username"></div>
+    <div><input type="text" placeholder="enter password"[(ngModel)]="password"></div>
+    <div><input type="button" value="Click here " (click)="validate()"></div>
+
+</div>

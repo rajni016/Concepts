@@ -1,4 +1,56 @@
 <app-header></app-header>
 <p>home works!</p>
+{{pagename}}<!-- This is binding from ts file to html -->
 <h1>this is home page</h1>
+<h1>{{message}}</h1>
+<input type="text" placeholder="enter message"[(ngModel)]="message">
+<h1>{{age}}</h1>
+<input type="text" placeholder="enter age" [(ngModel)]="age">
+<h1 *ngIf="HideorShow">Hide me or show me</h1>
+<div>
+    <input type="button" value="click to show or hide"  (click)="hideandshowmethod()">
+</div>
 
+<div *ngFor="let anykey of personDetails">
+    <h3 [ngClass]="{'blue':anykey.age < 20,'green':anykey.age > 35}">{{anykey.name}} and age is {{anykey.age}}</h3>
+
+</div>
+
+
+<!-- Getting object data by binding -->
+<div>
+    <h2>{{person.name}} and object age is {{person.age}}</h2>
+</div>
+
+
+
+<!-- ngFor is used to add or remove the css classes and defined by the square brackets -->
+<div>
+    <h3 [ngClass]="cssClassname"> This is [ngClass] for changing cssclass</h3>
+    <button (click)="changeCssclassnamemethod('red')">Red</button>
+    <button (click)="changeCssclassnamemethod('blue')">Blue</button>
+    <button (click)="changeCssclassnamemethod('green')">Green</button>
+</div>
+
+<!-- Hiding and showing the city population less than 150 with the option of changing colors -->
+<div [ngClass]="cssClassname">
+    <div *ngFor="let key of Cityname">
+ 
+        <div *ngIf="HideCitypop">
+            <h3 *ngIf="key.pop <150" >
+            {{key.name}} and population is{{key.pop}} </h3>
+        </div>  
+    </div>
+    <button (click)="cityhideandshow()">Click to show city pop less than 150</button>
+</div>
+<div>
+    <button (click)="getuser()">Click to show data from get url</button>
+    <div *ngFor="let response of userResponse">
+       {{response.email}}
+       <img src="{{response.avatar}}" alt="">
+    </div>
+    <input type="text" [(ngModel)]="username" placeholder="enter user name">
+    <input type="text" [(ngModel)]="jobname" placeholder="enter job name">
+
+    <button (click)="postUser()">Post Data</button>
+</div>

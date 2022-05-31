@@ -14,6 +14,24 @@ ng build-->to build angular application
 localhost:4200(see angular application)-> default by angular application
 -->app.module.ts is the main class
 
+binding--> Display the variable in html page
+one way data binding-->ts to html
+two way data binding-->html to ts and vice versa
+form module in app.module to enable two way data binding and include it in imports
+[(ngModel)] is angular attribute which enables two data binding
+
+-->Directives
+Default--> 
+ngIf-->Hide or show the elements, *ngIf will show according to boolean expression provided
+ngFor-->Iterating the elements and used only for array of objetcs. Normal objects are displayed directly by using binding
+ngClass-> adding or removing the css classes for elements
+ngModel--Two way data binding, just to show text 
+-->HTTP api Integration
+Import the httpClientModule in the app.module.ts
+import HTTP client to component
+Create object for the httpClient in the component
+use object to implement get and post
+
 
 
 
