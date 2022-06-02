@@ -3,6 +3,7 @@ c-->component
 d-->directive
 p-->pipes
 s-->service
+ng serve--> to run the application
 
 ng new application name--> create the angular application
 ng serve-->to run the application
@@ -32,6 +33,19 @@ import HTTP client to component
 Create object for the httpClient in the component
 use object to implement get and post
 
+---> services
+Doesnot have UI interactions and can be accessed by across applications
+ng g s servicename
+---> Pipes(|) -->text transformation tools
+Uppercasepipe--> 
+currency
 
+Creating our own pipe--> ng g p pipename
 
+Sharing the data from child component parent component
+create shared variable(in child.ts)
+create a varibale using decrator @ output()datashared =new EventEmiiter()(in child.ts)
+this.datashared.emit("sample message")
+sharing data between the components which are not related
 
+-->Web Template Integration

@@ -1,7 +1,7 @@
 <app-header></app-header>
 <p>home works!</p>
-{{pagename}}<!-- This is binding from ts file to html -->
-<h1>this is home page</h1>
+{{pagename| uppercase}}<!-- This is binding from ts file to html -->
+<h1 class="red" >this is home page </h1>
 <h1>{{message}}</h1>
 <input type="text" placeholder="enter message"[(ngModel)]="message">
 <h1>{{age}}</h1>
@@ -15,6 +15,14 @@
     <h3 [ngClass]="{'blue':anykey.age < 20,'green':anykey.age > 35}">{{anykey.name}} and age is {{anykey.age}}</h3>
 
 </div>
+<input type="text" placeholder="enter" [(ngModel)]="searchtext">
+
+ <div *ngFor="let anykey of personDetails | arraypipe:searchtext" >
+    <h3 [ngClass]="{'blue':anykey.age < 20,'green':anykey.age > 35}">{{anykey.name}} and age is {{anykey.age}}</h3>
+
+</div> 
+
+
 
 
 <!-- Getting object data by binding -->
@@ -53,4 +61,7 @@
     <input type="text" [(ngModel)]="jobname" placeholder="enter job name">
 
     <button (click)="postUser()">Post Data</button>
+</div>
+<div >
+    <button (click)=" callservicemethod()">Click to call service logic</button>
 </div>

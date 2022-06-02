@@ -1,3 +1,29 @@
 <app-header></app-header>
-<p>contact works!</p>
+
+
+<div>
+   <div>
+    <input type="text" placeholder="Enter Name" [(ngModel)]="username">
+   </div> 
+   <div><input type="text" placeholder="Enter Email" [(ngModel)]="email"></div>
+   <div>
+    <button (click)="Textareacheck()">Submit</button>
+   </div>
+   
+</div>
+<div [ngClass]="cssClassname">
+   <div *ngFor="let details of Subjectslist">
+      <div *ngIf="HideOrShowmarks">
+         <div>
+            {{details.name }} attained marks are {{details.marks}}   
+         </div>    
+      </div>  
+   </div>
+   <button (click)="HideorShowmarksmethod()">Click here for Subjcetslist</button>
+
+</div>
+
+
+
+
 

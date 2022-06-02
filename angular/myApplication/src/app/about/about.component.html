@@ -10,3 +10,34 @@
     <div><input type="button" value="Click here " (click)="validate()"></div>
 
 </div>
+<div><input type="button" value="Click servicelogic" (click)="Servicemethod()"></div>
+<div><input type="button" value="Click servicelogic alert" (click)="servicealertmethod()"></div>
+<div >
+    <button (click)="getapi()">show data</button> 
+    <div *ngFor="let response of userresponse">
+        {{response.email}}
+    </div>
+   
+  </div>
+
+  <input type="button" value="Call server api method" (click)="loaderapi()">
+  <div *ngIf="Loadershown"class="loader_css">
+    <img src="" alt="">
+</div>
+<h1>{{currencypipe | currency:'Rs'}}</h1>
+<div>
+    <h1>{{currentDate}}</h1>
+ </div>
+ <p>Date format changed using pipes</p>
+ <div>
+    <h1>{{currentDate| date}}</h1>
+ </div>
+ <div>
+    <h1>{{currentDate| date:'medium'}}</h1>
+ </div>
+ <div>
+    <h1>{{currentDate| date:'fullDate'}}</h1>
+ </div>
+ <h1>{{num| square}}</h1>
+ <h1>{{num1| square}}</h1>
+ 

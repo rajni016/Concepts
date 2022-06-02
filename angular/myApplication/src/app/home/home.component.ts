@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { CommonserviceService } from '../commonservice.service';
 
 @Component({
   selector: 'app-home',
@@ -17,9 +18,10 @@ export class HomeComponent implements OnInit {
  userResponse:any=[];
  username="";
  jobname="";
+ searchtext="";
 
 // creating the object for http client using constructor
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private common:CommonserviceService) { }
 
   ngOnInit(): void {
   }
@@ -89,6 +91,9 @@ console.log(res);
      this.username="";
      this.jobname="";
    })
+ }
+ callservicemethod(){
+   this.common.printMessage(); // common is the object created for service named common service
  }
  }
   

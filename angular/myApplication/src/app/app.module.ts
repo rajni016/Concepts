@@ -9,6 +9,9 @@ import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
+import { SquarePipe } from './square.pipe';
+import { ArraypipePipe } from './arraypipe.pipe';
 FormsModule
 //main class
 @NgModule({
@@ -17,7 +20,10 @@ FormsModule
     HomeComponent,
     ContactComponent,
     AboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
+    SquarePipe,
+    ArraypipePipe
   ],
   imports: [
     BrowserModule,
