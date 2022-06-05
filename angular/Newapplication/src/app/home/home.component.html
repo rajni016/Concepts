@@ -1,0 +1,22 @@
+<p>add home component in routing module.ts(import home component)ng</p>
+<h3>{{bindingv}}</h3>
+<!-- iTerating using ngFor and showing data only when button is clicked using ngIf and 
+    separte buttons for changing the cssclasses of different colors
+-->
+<button (click)="Candidatedetailsmethod()"> Click here for Candidate Details</button>
+<div [ngClass]="cssclasschange" *ngIf="detailsofcandidates">
+    <div *ngFor="let details of CandidatesDetails">
+        {{details.name}}  rank is {{details.rank}}
+    </div>
+</div>
+<div>
+    <button (click)="Changecolorbycss('blue')"> Click to change Blue</button>
+    <button (click)="Changecolorbycss('purple')"> Click to change for Purple</button>
+    <button (click)="Changecolorbycss('red')"> Click to change for Red</button>
+</div>
+<!-- Getting Data from the HTTP get -->
+<div>
+    <button click="reqapidata()"> Click to get data</button>
+    <div *ngFor="let key of Getdata"> {{key.email}}</div>
+</div>
+

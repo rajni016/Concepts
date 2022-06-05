@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header fromParent="variable is shared from the parent in child tag"></app-header>
 <p>home works!</p>
 {{pagename| uppercase}}<!-- This is binding from ts file to html -->
 <h1 class="red" >this is home page </h1>
@@ -11,10 +11,17 @@
     <input type="button" value="click to show or hide"  (click)="hideandshowmethod()">
 </div>
 
+
+
 <div *ngFor="let anykey of personDetails">
     <h3 [ngClass]="{'blue':anykey.age < 20,'green':anykey.age > 35}">{{anykey.name}} and age is {{anykey.age}}</h3>
 
 </div>
+
+
+
+
+
 <input type="text" placeholder="enter" [(ngModel)]="searchtext">
 
  <div *ngFor="let anykey of personDetails | arraypipe:searchtext" >

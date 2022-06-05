@@ -42,10 +42,13 @@ currency
 
 Creating our own pipe--> ng g p pipename
 
-Sharing the data from child component parent component
-create shared variable(in child.ts)
+
+--->Sharing the data from  parent component  to child component
+create a shared variable in the child component(in child.ts)
+add the decorator(@Input, @Output for the variable)
+add the 
 create a varibale using decrator @ output()datashared =new EventEmiiter()(in child.ts)
 this.datashared.emit("sample message")
 sharing data between the components which are not related
-
+add the variable in child component tag which is in parent component
 -->Web Template Integration
