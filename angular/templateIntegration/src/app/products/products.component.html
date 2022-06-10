@@ -5,20 +5,41 @@
           <div class="col-md-6">
              <div class="titlepage">
                 <h2>Our Product</h2>
+                <h3>{{errormessage}}</h3>
              </div>
           </div>
        </div>
     </div>
+
     <div class="container-fluid">
        <div class="row">
           <div *ngFor ="let product of productArray" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 padding_left0">
              <div class="product_box">
+               <!-- <a href="product-details", in angular we have  routerlink which is controlled by angular> -->
+                <a routerLink="/product-details/{{product.id}}">
                 <figure><img src="../../assets/images/{{product.name}}" alt="#"/></figure>
-                <h3 class="black">{{product.product_name}}</h3>
+                <h3 >{{product.product_name}}</h3>
+               </a>
              </div>
           
           
        </div>
     </div>
  </div>
+ <div class="container-fluid">
+   <div class="row">
+      <div *ngFor ="let user of userarray" class="col-xl-3 col-lg-3 col-md-3 col-sm-12 padding_left0">
+         <div class="product_box">
+           <!-- <a href="product-details", in angular we have  routerlink which is controlled by angular> -->
+            <a routerLink="/product-details/{{user.id}}">
+            <figure><img src="{{user.avatar}}" alt="#"/></figure>
+            <h3 >{{user.email}}</h3>
+           </a>
+         </div>
+      
+   </div>
+</div>
+</div>
+</div>
+
 <app-footer></app-footer>

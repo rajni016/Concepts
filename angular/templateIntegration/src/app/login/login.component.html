@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div>
+    <h1>
+        Login
+    </h1>
+</div>
+<div>
+    <input type="text" [(ngModel)]="email" placeholder="enter email">
+</div>
+<div>
+    <input type="text" [(ngModel)]="password" placeholder="enter Password">
+</div>
+<div>
+    <button (click)="login()"> Submit res</button>
+</div> 
+<div >
+    <input type="button"  value="click me" (click)="selectcustomers()" > 
+     <div *ngFor="let response of customerdata">
+        {{response.name}}
+     </div>   
+     
+</div> 
+<div>
+    <h2>Registration</h2>
+</div>
+<div>
+    <input type="text" [(ngModel)]="emailReg" placeholder="enter email">
+</div>
+<div>
+    <input type="text" [(ngModel)]="passwordReg" placeholder="enter Password">
+</div>
+<div>
+    <button (click)="Registration()" > Submit  </button>
+
+</div>
+
+}

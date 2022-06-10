@@ -23,23 +23,29 @@
                             <a class="nav-link" href="home"> Home  </a>
                          </li>
                          <li class="nav-item active" [ngClass]="{'active':currentpage=='about'}">
-                            <a class="nav-link" href="about">About</a>
+                            <a class="nav-link" routerLink="/about">About</a>
                          </li>
-                         <li class="nav-item"[ngClass]="{'active':currentpage=='products'}">
-                            <a class="nav-link" href="products">Products </a>
+                         <li *ngIf="isLoggedIn"  class="nav-item"[ngClass]="{'active':currentpage=='products'}">
+                            <a class="nav-link" routerLink="/products">Products </a>
                          </li>
                          <li class="nav-item" [ngClass]="{'active':currentpage=='blog'}">
                             <a class="nav-link" href="blog.html">Blog</a>
                          </li>
-                         <li class="nav-item"[ngClass]="{'active':currentpage=='contact'}">
+                         <li class="nav-item"[ngClass]="{'active':currentpage=='contact'}"> 
                             <a class="nav-link" href="contact">Contact</a>
                          </li>
+                         <li class="nav-item" *ngIf="isLoggedIn" (click)="logout()">
+                           <a class="nav-link" routerLink="#">Logout</a>
+                        </li>
+                        <li class="nav-item" *ngIf="!isLoggedIn">
+                           <a class="nav-link" routerLink="/login">Login</a>
+                        </li>
                          <li class="nav-item d_none">
                             <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                          </li>
-                         <li class=" d_none get_btn">
+                         <!-- <li class=" d_none get_btn">
                             <a  href="#">Get a quote</a>
-                         </li>
+                         </li> -->
                       </ul>
                    </div>
                 </nav>

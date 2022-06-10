@@ -9,6 +9,11 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { RegistrationComponent } from './registration/registration.component';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +23,15 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailsComponent,
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
