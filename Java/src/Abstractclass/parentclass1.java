@@ -8,7 +8,19 @@ public abstract class parentclass1 {
     }
     public static void add(int x, int y,int z){
         int edookati =x+y-z-x-y+z;
+        System.out.println(edookati);
     }
     public abstract void method2();
     public abstract void add(int x, int y) ;
-}
+
+    public static void main(String []args){
+        add(23,34,4);
+
+         method1();
+    }
+
+    }
+
+
+
+

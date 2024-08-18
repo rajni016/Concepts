@@ -1,7 +1,7 @@
 package Interface;
 
 public interface parentclass {
-    public void add(int x, int y);
-    public void strng(String message);
-    public void fl(float a, float b);
+     void add(int x, int y);
+ void strng(String message);
+  void fl(float a, float b);
 }

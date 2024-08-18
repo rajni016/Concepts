@@ -5,7 +5,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/../../../../Auditory Brain Structures/META-INF/MANIFEST.MF" />
       </element>
-      <element id="module-output" name="Java Icms" />
+      <element id="module-output" name="Java" />
       <element id="extracted-dir" path="$USER_HOME$/ojdbc8-21.5.0.0.jar" path-in-jar="/" />
     </root>
   </artifact>

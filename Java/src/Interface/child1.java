@@ -10,7 +10,7 @@ public class child1 implements parentclass,parentclass2,parentclass3{
 
     @Override
     public void strng(String message) {
-        String msg="I love you"+ message;
+        String msg="Hello"+ message;
         System.out.println(msg);
         System.out.println("Parent interface class has 3 method so all the methods are overrided where as in abstract " +
                 "class only the methods which are mentioned as abstract are overridden and donot have defintions");
@@ -40,7 +40,7 @@ public class child1 implements parentclass,parentclass2,parentclass3{
         parentclass objct=new child1();
         parentclass2 class2=new child1();
         obj.add(10,5);
-        obj.strng("Pingu kannama");
+        obj.strng("This is String object");
         obj.fl(10f,5f);
         objct.strng("hehhhe");
         class2.method1();
@@ -50,6 +50,32 @@ public class child1 implements parentclass,parentclass2,parentclass3{
 
     @Override
     public void method3() {
+        System.out.println("Method-3");
 
     }
 }
+class childclass implements parentclass2,parentclass3{
+
+    @Override
+    public void method1() {
+
+    }
+
+    @Override
+    public void method2() {
+
+    }
+
+    @Override
+    public void method3() {
+        System.out.println("Method-3");
+    }
+    public static void main(String[]args){
+        childclass c=new childclass();
+        c.method3();
+        parentclass2 p=new childclass();
+        p.method3();
+
+    }
+}
+

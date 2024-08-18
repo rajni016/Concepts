@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class data_connection {
+//public class data_connection {
     /*public static void main(String[]args){
         try{
             //  DriverManager.registerDriver(new com.mysql.jdbc.Driver());
@@ -23,5 +23,5 @@ public class data_connection {
         }
 
     }*/
-}
+//}
 
